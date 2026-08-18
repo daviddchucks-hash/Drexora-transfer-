@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drexora Transfer — Send files, no cables, no cloud</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#home" class="brand">
+        <div class="brand-mark">D</div>
+        Drexora Transfer
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-target="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-target="about">About</a></li>
+        <li><a href="#services" class="nav-link" data-target="services">Services</a></li>
+        <li><a href="#download" class="nav-link" data-target="download">Download</a></li>
+      </ul>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <a class="nav-cta" href="#download">Get the app</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <div class="wrap" style="display:contents;">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>Works on your local Wi-Fi — no internet needed</span>
+        <h1>Send files between your phone and laptop.<br><span class="accent">No cables. No cloud.</span></h1>
+        <p class="lede">Drexora Transfer finds your other device the moment both apps are open on the same Wi-Fi network — then moves files straight across. Nothing passes through a server.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#download">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none"><path d="M3 5.5L10 4.4V11.4H3V5.5Z" fill="currentColor"/><path d="M11 4.25L21 3V11.4H11V4.25Z" fill="currentColor"/><path d="M3 12.4H10V19.6L3 18.5V12.4Z" fill="currentColor"/><path d="M11 12.4H21V21L11 19.75V12.4Z" fill="currentColor"/></svg>
+            <span class="btn-copy">Download for Windows<small>.exe · v2.4 · 38 MB</small></span>
+          </a>
+          <a class="btn btn-ghost" href="#download">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12v10a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/><path d="M4 10v5M20 10v5M9.5 19v2M14.5 19v2"/></svg>
+            <span class="btn-copy">Download for Android<small>.apk · v2.4 · 24 MB</small></span>
+          </a>
+        </div>
+        <span class="meta-note">Free · No account required · Same-network transfer only</span>
+      </div>
+
+      <div class="panel">
+        <div class="panel-top">
+          <div class="panel-brand">
+            <div class="sq"></div>
+            <div>
+              <div class="panel-title">Drexora Transfer</div>
+              <div class="panel-sub">demo · not a live connection</div>
+            </div>
+          </div>
+          <div class="status-pill"><span class="dot"></span>Receiving</div>
+        </div>
+
+        <div class="stage">
+          <div class="beam-track"></div>
+          <div class="beam-dot"></div>
+          <div class="device-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2f0f7" stroke-width="1.6"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          </div>
+          <div class="device-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f2f0f7" stroke-width="1.6"><rect x="2" y="4" width="20" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <span class="device-label left">phone</span>
+          <span class="device-label right">laptop</span>
+        </div>
+
+        <div class="feed" id="feed"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-copy">
+          <span class="kicker">ABOUT</span>
+          <h2>One Wi-Fi network, zero setup</h2>
+          <p>Drexora Transfer doesn't use mobile data, Bluetooth, or a cloud account. It works entirely over the <strong>Wi-Fi network your devices are already connected to</strong> — the same one your router hands out at home, in the office, or on a guest network.</p>
+          <p>When you open the app on your phone and your laptop, each one <strong>broadcasts itself on that local network</strong>. The moment both are open and connected to the same Wi-Fi, they detect each other automatically — no pairing code, no QR scan, no manual IP entry.</p>
+          <p>Once detected, a device shows up in the list by its <strong>local IP address</strong>, ready to receive. If a device leaves the network or closes the app, it disappears from the list just as automatically.</p>
+        </div>
+
+        <div class="network-diagram">
+          <div class="wifi-badge">
+            <svg class="wifi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.5a11 11 0 0 1 14 0"/><path d="M8 15.8a6.5 6.5 0 0 1 8 0"/><path d="M11 19a2 2 0 0 1 2 0"/></svg>
+            Same Wi-Fi network
+          </div>
+          <div class="diagram-row">
+            <div class="diagram-device">
+              <div class="ic-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f2f0f7" stroke-width="1.6"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+              <span class="lbl">Phone</span>
+              <span class="ip">192.168.1.42</span>
+            </div>
+            <div class="diagram-link"><span class="status">auto-detected</span></div>
+            <div class="diagram-device">
+              <div class="ic-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2f0f7" stroke-width="1.6"><rect x="2" y="4" width="20" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg></div>
+              <span class="lbl">Laptop</span>
+              <span class="ip">192.168.1.17</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">SERVICES</span>
+        <h2>What Drexora Transfer does</h2>
+        <p class="section-sub">Everything it offers is built around one job: moving files between your own devices, fast and privately.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="service-grid">
+        <div class="service">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+          <h3>Local Wi-Fi transfer</h3>
+          <p>Files move directly over your Wi-Fi network — no internet connection or mobile data required.</p>
+        </div>
+        <div class="service">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.5a11 11 0 0 1 14 0"/><path d="M8 15.8a6.5 6.5 0 0 1 8 0"/><path d="M11 19a2 2 0 0 1 2 0"/></svg>
+          <h3>Automatic device discovery</h3>
+          <p>Both apps detect each other the instant they're open on the same network — no codes to enter.</p>
+        </div>
+        <div class="service">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          <h3>Files and folders</h3>
+          <p>Send single files or full folders in one drop — structure stays intact on the receiving end.</p>
+        </div>
+        <div class="service">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11Z"/></svg>
+          <h3>Private by design</h3>
+          <p>Nothing is uploaded anywhere. Files stay on your network, between your two devices only.</p>
+        </div>
+        <div class="service">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v5l4 2M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/></svg>
+          <h3>Transfer history</h3>
+          <p>Every send and receive is logged with a timestamp, so past transfers are easy to find again.</p>
+        </div>
+        <div class="service">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m17 8-5-5-5 5M12 3v14M5 21h14"/></svg>
+          <h3>Two-way, one window</h3>
+          <p>Send and receive from the same screen on both Windows and Android.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">DOWNLOAD</span>
+        <h2>Get Drexora Transfer</h2>
+        <p class="section-sub">Install it on both the device you're sending from and the one you're sending to, then connect both to the same Wi-Fi.</p>
+      </div>
+
+      <div class="download-grid">
+        <div class="dl-card windows" id="windows-download">
+          <div class="dl-top">
+            <div class="dl-ic">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 5.5L10 4.4V11.4H3V5.5Z" fill="currentColor"/><path d="M11 4.25L21 3V11.4H11V4.25Z" fill="currentColor"/><path d="M3 12.4H10V19.6L3 18.5V12.4Z" fill="currentColor"/><path d="M11 12.4H21V21L11 19.75V12.4Z" fill="currentColor"/></svg>
+            </div>
+            <div>
+              <div class="dl-name">Windows</div>
+              <div class="dl-tag">desktop app · .exe installer</div>
+            </div>
+          </div>
+          <div class="spec-list">
+            <div class="spec-row"><span>VERSION</span><span>2.4.0</span></div>
+            <div class="spec-row"><span>SIZE</span><span>38 MB</span></div>
+            <div class="spec-row"><span>REQUIRES</span><span>Windows 10 or later, 64-bit</span></div>
+            <div class="spec-row"><span>UPDATED</span><span>Aug 2026</span></div>
+          </div>
+          <!-- Replace href with the hosted .exe URL -->
+          <a class="dl-btn" href="#" download>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+            Download DrexoraTransfer.exe
+          </a>
+          <span class="checksum">SHA-256 checksum published on release page</span>
+        </div>
+
+        <div class="dl-card android" id="android-download">
+          <div class="dl-top">
+            <div class="dl-ic">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12v10a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/><path d="M4 10v5M20 10v5M9.5 19v2M14.5 19v2"/></svg>
+            </div>
+            <div>
+              <div class="dl-name">Android</div>
+              <div class="dl-tag">mobile app · .apk package</div>
+            </div>
+          </div>
+          <div class="spec-list">
+            <div class="spec-row"><span>VERSION</span><span>2.4.0</span></div>
+            <div class="spec-row"><span>SIZE</span><span>24 MB</span></div>
+            <div class="spec-row"><span>REQUIRES</span><span>Android 8.0 or later</span></div>
+            <div class="spec-row"><span>UPDATED</span><span>Aug 2026</span></div>
+          </div>
+          <!-- Replace href with the hosted .apk URL -->
+          <a class="dl-btn" href="#" download>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+            Download DrexoraTransfer.apk
+          </a>
+          <span class="checksum">Not on Google Play — allow "install from unknown sources"</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-brand"><div class="brand-mark" style="width:24px;height:24px;font-size:12px;">D</div>Drexora Transfer</div>
+      <div class="foot-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#download">Download</a>
+      </div>
+      <span class="meta-note">Same-network file transfer for Windows &amp; Android</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
