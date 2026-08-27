@@ -1,5 +1,5 @@
 // Hero feed: simulate rotating "completed" transfer rows in sync with the beam animation
-  const files = ["vacation_photos.zip","Q3_report.pdf","presentation.pptx","mixtape.mp3","notes.docx","screenshot_014.png"];
+  const files = ["vacation_photos.zip","Q3_report.pdf","presentation.pptx","mixtape.mp3","notes.docx","screenshot_014.png","all_my_movies.mp4"];
   const feed = document.getElementById('feed');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let i = 0;
